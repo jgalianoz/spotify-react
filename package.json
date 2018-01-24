@@ -2,5 +2,23 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
-  }
+  },
+  "name": "spotify-react",
+  "description": "app music using api spotify and react.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgalianoz/spotify-react.git"
+  },
+  "author": "@jgalianoz - Manuel Galindez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgalianoz/spotify-react/issues"
+  },
+  "homepage": "https://github.com/jgalianoz/spotify-react#readme"
 }
