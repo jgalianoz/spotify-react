@@ -9,3 +9,6 @@ yarn-error.log*
 
 # Folder Dependency
 node_modules
+
+# Folder compile code
+built
