@@ -1,15 +1,22 @@
 {
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
   },
   "name": "spotify-react",
   "description": "app music using api spotify and react.js",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "template-string-loader": "^0.0.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node ./built/server",
+    "build:watch": "webpack -w"
   },
   "repository": {
     "type": "git",
