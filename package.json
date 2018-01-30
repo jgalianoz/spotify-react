@@ -11,12 +11,17 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "serve": "^6.4.9",
     "template-string-loader": "^0.0.3"
   },
   "scripts": {
     "serve": "node ./built/server",
-    "build:watch": "webpack -w"
+    "build:dev": "webpack -w",
+    "serve:statics": "serve ./built/statics --port 3001 --cache 0 --cors"
   },
   "repository": {
     "type": "git",
