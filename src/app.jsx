@@ -1,7 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import Home from './components/Home';
+
+import 'normalize.css';
+
 render(
-  <h1>Welcome React</h1>,
+  <Home/>,
   document.getElementById('app')
 );

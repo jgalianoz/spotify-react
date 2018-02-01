@@ -16,7 +16,16 @@ const config = {
           presets: ['latest', 'react'],
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' }, { loader: 'css-loader' },
+        ],
+      },
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   target: 'web'
 }
