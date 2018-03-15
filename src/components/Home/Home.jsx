@@ -1,6 +1,8 @@
 import React from 'react';
-
 import styled from 'styled-components';
+
+import Header from '../Header/Header';
+import ListMusic from '../ListMusic/ListMusic';
 
 const MainSection = styled.div`
   background-image: url('http://localhost:3001/assets/images/mainSection.jpg');
@@ -39,6 +41,7 @@ const Link = styled.a`
 
 const Home = () => (
   <section>
+    <Header />
     <MainSection>
       <Title>
         Música para todos
@@ -49,6 +52,9 @@ const Home = () => (
         </Link>
       </div>
     </MainSection>
+    <section>
+      <ListMusic />
+    </section>
   </section>
 );
 
