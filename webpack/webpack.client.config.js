@@ -17,6 +17,10 @@ const config = {
         },
       },
       {
+        test: /\.json$/,
+        loader: 'raw-loader',
+      },
+      {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' }, { loader: 'css-loader' },

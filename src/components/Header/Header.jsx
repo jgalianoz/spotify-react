@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const HeaderCont = styled.header`
   background-color: #000000;
-  padding: .8em;
 `;
 
 const HeaderWrapper = styled.div`
@@ -22,7 +21,7 @@ const Header = () => (
       <figure>
         <img
           src="http://localhost:3001/assets/images/logo.png"
-          width="90"
+          width="150"
           alt="Spotify"
         />
       </figure>

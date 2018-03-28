@@ -19,7 +19,11 @@ const config = {
         query: {
           plugins: ['transform-es2015-template-literals'],
         },
-      }
+      },
+      {
+        test: /\.json$/,
+        loader: 'raw-loader',
+      },
     ]
   },
   target: 'node',
