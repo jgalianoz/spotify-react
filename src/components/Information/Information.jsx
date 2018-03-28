@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Chat from '../Chat/Chat';
 import GridImage from '../../molecules/GridImage/GridImage';
 
 const ContainerInformation = styled.section`
@@ -9,7 +10,11 @@ const ContainerInformation = styled.section`
   border: '1px solid red';
 `;
 
-const Title = styled.h1`
+const Content = styled.div`
+  display: flex
+`;
+
+const Title = styled.h2`
   padding: 0;
   font-size: 48px;
   color: #2e2b2b;
@@ -21,7 +26,10 @@ const Information = () => (
     <Title>
       ¡Llegamos hasta lo imposible!
     </Title>
-    <GridImage />
+    <Content>
+      <GridImage />
+      <Chat />
+    </Content>
   </ContainerInformation>
 );
 

@@ -46,27 +46,26 @@ const Description = styled.p`
   margin: 0 auto
 `;
 
-const Home = () => (
-  <section>
-
-    <Header />
-    <MainSection>
-      <Title>
-        We go beyond
-      </Title>
-      <Description>
-        ¡Si quieres conocernos, monokuBot puede ayudarte!
-      </Description>
-      <div className="containerButton">
-        <Link href="#">
-          Lest go monokuBot
-        </Link>
-      </div>
-    </MainSection>
-
-    <Information />
-
-  </section>
-);
+const Home = () => {
+  return(
+    <section>
+      <Header />
+      <MainSection>
+        <Title>
+          We go beyond
+        </Title>
+        <Description>
+          ¡Si quieres conocernos, monokuBot puede ayudarte!
+        </Description>
+        <div className="containerButton">
+          <Link href="#">
+            Lest go monokuBot
+          </Link>
+        </div>
+      </MainSection>
+      <Information />
+    </section>
+  );
+}
 
 export default Home;

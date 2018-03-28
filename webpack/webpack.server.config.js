@@ -1,4 +1,14 @@
+const fs = require('fs');
 const path = require('path');
+
+
+const nodeModules = fs
+  .readdirSync('node_modules')
+  .filter(x => ['.bin'].indexOf(x) === -1)
+  .reduce(
+    (modules, module) => Object.assign(modules, { [module]: `commonjs ${module}` }),
+    {}
+  );
 
 const config = {
   entry: './src/server.js',
@@ -27,6 +37,7 @@ const config = {
     ]
   },
   target: 'node',
+  externals: nodeModules,
 }
 
 module.exports = config;

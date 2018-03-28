@@ -1,6 +1,7 @@
-const http = require('http');
-//import React from 'react';
-//import { renderToString } from 'react-dom/server';
+const app = require('http').createServer(requestHandler);
+const io = require('socket.io')(app);
+
+const api = require('./utils/api');
 
 const layout = require('./index.html');
 
@@ -15,8 +16,16 @@ function requestHandler(req, res) {
   res.end();
 }
 
-const server = http.createServer(requestHandler);
+io.on('connection', (socket) => {
+  socket.on('new_message', (msj) => {
+    console.log(msj)
+    api.getRest(msj.message).then((res) => {
+      console.log(res);
+      socket.emit('message', {message: res});
+    })
+  })
+})
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server running in http://localhost:${port}`);
 })
